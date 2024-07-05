@@ -6,7 +6,10 @@ readme = "README.md"
 requires-python = ">=3.9.0"
 dynamic = ["version"]
 
-dependencies = []
+dependencies = [
+  "sleap[pypi]==1.3.3",
+  "optuna"
+]
 
 license = {text = "BSD-3-Clause"}
 
@@ -39,6 +42,9 @@ dev = [
   "ruff",
   "setuptools_scm",
 ]
+
+[project.scripts]
+optimise = "sleap_sweep.main:main"
 
 [build-system]
 requires = [
